@@ -1,0 +1,17 @@
+{
+  "name": "nhsuk.error-pages",
+  "version": "1.0.0",
+  "description": "NHS.UK error pages to be served by Akamai",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-nunjucks-render": "^2.2.3"
+  }
+}
