@@ -1,0 +1,139 @@
+$mobile-breakpoint: 641px;
+
+$background-grey: #f0f4f5;
+$nhsuk-blue: #005eb8;
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, html * {
+  font-family: arial, helvetica, sans-serif;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: $background-grey;
+  color: #212B32;
+  min-height: 100%;
+}
+
+body {
+  background-color: $background-grey;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+ 
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+
+.nhsuk-width-container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.nhsuk-header {
+  background: $nhsuk-blue;
+}
+
+.nhsuk-header__logo {
+  padding: 16px 0;
+}
+
+.nhsuk-logo__background {
+  fill: #fff;
+}
+
+.nhsuk-logo__text {
+  fill: $nhsuk-blue;
+}
+
+.nhsuk-header__link {
+  display: block;
+  height: 40px;
+  width: 99px;
+  
+  &:hover {
+    box-shadow: 0 0 0 4px #003d78;
+  }
+
+  &:focus .nhsuk-logo {
+    box-shadow: 0 0 0 4px #ffeb3b;
+  }
+}
+
+.nhsuk-logo {
+  border: 0;
+  height: 40px;
+  max-width: 100%;
+  vertical-align: middle;
+  width: 99px;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 36px;
+  margin: 56px 0 0;
+}
+
+@media (min-width: $mobile-breakpoint) {
+  h1 {
+    font-size: 2.52632em;
+    line-height: 56px;
+    margin: 64px 0 0;
+  }
+}
+
+p {
+  font-weight: 400;
+  margin: 16px 0 0;
+
+  @media (min-width: $mobile-breakpoint) { 
+    margin: 24px 0 0
+  }
+}
+
+ol, ul {
+  font-weight: 400;
+  margin: 16px 0 0;
+  padding-left: 20px;
+
+  @media (min-width: $mobile-breakpoint) {
+    margin: 24px 0 0;
+  }
+}
+
+li {
+  margin: 8px 0 0;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: $nhsuk-blue;
+
+  &:hover {
+    color: #7c2855;
+    text-decoration: none;
+  }
+  
+  &:visited {
+    color: #330072;
+  }
+  
+  &:focus {
+    background-color: #ffeb3b;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    outline: 4px solid transparent;
+    text-decoration: none;
+  }
+}
