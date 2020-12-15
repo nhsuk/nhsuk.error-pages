@@ -20,10 +20,14 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: AzureFileCopy@4
+- task: CopyFiles@2
   inputs:
-    SourcePath: './dist/*'
-    azureSubscription: 'nhsuk-development(07748954-52d6-46ce-95e6-2701bfc715b4)'
-    Destination: 'AzureBlob'
-    storage: 'nhsukerrorpagesdevuks'
-    ContainerName: 'pages'
+    SourceFolder: '$(agent.builddirectory)/dist'
+    Contents: 'dist/**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dist'
+    publishLocation: 'Container'
