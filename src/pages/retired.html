@@ -2,6 +2,7 @@
 
 {% block title %}This page has been retired{% endblock %}
 
-{% block h1 %}This page has been retired.{% endblock %}
-
-{% block content %}<p>Visit the <a href="/">NHS website homepage</a></p>{% endblock %}
+{% block content -%}
+  <h1>This page has been retired.</h1>
+  <p>Visit the <a href="/">NHS website homepage</a></p>
+{%- endblock %}
