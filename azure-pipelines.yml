@@ -22,12 +22,10 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)/dist'
-    Contents: 'dist/**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    sourceFolder: $(Build.SourcesDirectory)/dist
+    targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'dist'
-    publishLocation: 'Container'
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: dist
