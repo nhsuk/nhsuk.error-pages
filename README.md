@@ -2,6 +2,8 @@
 
 Repository to build simple error pages which share the same simple HTML and CSS.
 
+These are built in Azure and pushed to blob storage for Akamai to serve when it encounters that error.
+
 ## Install
 
 `npm install`
